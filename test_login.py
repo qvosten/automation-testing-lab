@@ -20,7 +20,7 @@ def test_login_page_is_displayed(page: Page) -> None:
 
 def test_successful_login(page: Page) -> None:
     sign_in(page)
-    expect(page).to_have_url(f"{BASE_URL}/incorrect.html")
+    expect(page).to_have_url(f"{BASE_URL}/inventory.html")
     expect(page.locator('[data-test="inventory-container"]')).to_be_visible()
 
 
